@@ -34,6 +34,7 @@ export class FoodListComponent {
   public foodList: Food[];
   public selectedFood: Food;
   public calorieCount: number = 0;
+  public averageCalories: number = 0;
   public filterCalories: string = "All Foods"
 
   constructor() {}
@@ -48,7 +49,8 @@ export class FoodListComponent {
     this.foodList.push (
       new Food(foodArray[0], foodArray[1], foodArray[2], this.foodList.length)
     );
-    this.calorieCount += parseInt(foodArray[2]);
+    this.calorieCount += foodArray[2];
+    this.averageCalories = (this.calorieCount / (this.foodList.length));
   }
   onChange(filterOption) {
     this.filterCalories = filterOption;
@@ -60,8 +62,7 @@ export class FoodListComponent {
         this.foodList[i].calories = newCal;
       }
       this.calorieCount += (this.foodList[i].calories);
-      console.log(this.foodList[i].calories);
-      console.log(this.calorieCount);
+      this.averageCalories = (this.calorieCount / (this.foodList.length));
     }
   }
 }
