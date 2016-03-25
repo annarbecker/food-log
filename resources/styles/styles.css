@@ -8,8 +8,16 @@ body {
   padding-bottom: 25px;
 }
 
-input {
-  margin: 3px;
+h1 {
+  font-family: 'Nixie One', cursive;
+  font-size: 100px;
+  font-weight: bolder;
+  color: #667067;
+  padding-bottom: 10px;
+}
+
+.formLabel {
+  font-family: 'Nixie One', cursive;
 }
 
 .food-form {
@@ -19,6 +27,15 @@ input {
   padding: 1%;
   box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
   border-radius: 5px;
+}
+
+#dropdown {
+  width: 150px;
+  margin: 0 auto;
+}
+
+input {
+  margin: 3px;
 }
 
 .btn {
@@ -39,15 +56,6 @@ input {
   width: 8%;
 }
 
-
-h1 {
-  font-family: 'Nixie One', cursive;
-  font-size: 100px;
-  font-weight: bolder;
-  color: #667067;
-  padding-bottom: 10px;
-}
-
 .foodListItem {
   font-family: 'Nixie One', cursive;
   font-size: 24px;
@@ -59,16 +67,7 @@ h1 {
   cursor: pointer;
 }
 
-#dropdown {
-  width: 150px;
-  margin: 0 auto;
-}
-
 p {
   font-size: 16px;
   margin-left: 30px;
-}
-
-.formLabel {
-  font-family: 'Nixie One', cursive;
 }

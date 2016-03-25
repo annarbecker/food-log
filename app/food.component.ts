@@ -1,6 +1,5 @@
 import {Component} from 'angular2/core';
 import {Food} from './food.model';
-import {EditFoodComponent} from './edit-food.component';
 
 @Component({
   selector: 'food-display',
