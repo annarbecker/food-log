@@ -1,12 +1,14 @@
 import { Component } from 'angular2/core';
 import {Food} from './food.model';
 import {FoodComponent} from "./food.component";
+import {NewFoodComponent} from "./new-food.component";
 
 @Component({
   selector: 'food-list',
-  directives: [FoodComponent],
+  directives: [FoodComponent, NewFoodComponent],
   inputs: ['foodList'],
   template: `
+    <new-food (onSubmitNewFood)="createFood($event)"></new-food>
     <div *ngFor="#currentFood of foodList">
       <h3 class="foodListItem"
         (click)="foodClicked(currentFood)">&lowast;
@@ -27,5 +29,10 @@ export class FoodListComponent {
     } else {
       this.selectedFood = clickedFood;
     }
+  }
+  createFood(foodArray: Array<any>): void {
+    this.foodList.push (
+      new Food(foodArray[0], foodArray[1], foodArray[2], this.foodList.length)
+    );
   }
 }
