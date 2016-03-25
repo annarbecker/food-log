@@ -12,7 +12,6 @@ input {
   margin: 3px;
 }
 
-
 .food-form {
   display: flex;
   flex-direction: row;
@@ -34,6 +33,10 @@ input {
 .btn:hover {
   background-color: #94D1BE;
   border: #94D1BE;
+}
+
+#foodBtn {
+  width: 8%;
 }
 
 
