@@ -45,7 +45,7 @@ $ gulp serve
 
 ## Technologies Used
 
-Angular2 Javascript, Gulp, Bower
+Angular2 Javascript, Gulp, Bower, TypeScript
 
 ### License
 
