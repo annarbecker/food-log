@@ -11,7 +11,7 @@ import {EditFoodComponent} from './edit-food.component';
   pipes: [CaloriesPipe],
   inputs: ['foodList'],
   template: `
-    <h4 >Calorie Count: {{calorieCount}} | Average Calorie Count: {{averageCalories}}</h4>
+    <h4 >Calorie Count: {{calorieCount}} | Average Calorie Count: {{averageCaloriesString}}</h4>
     <new-food (onSubmitNewFood)="createFood($event)"></new-food>
     <select (change)="onChange($event.target.value)" class="form-control" id="dropdown">
       <option value="All Foods" selected="selected">All Foods</option>
@@ -35,6 +35,7 @@ export class FoodListComponent {
   public selectedFood: Food;
   public calorieCount: number = 0;
   public averageCalories: number = 0;
+  public averageCaloriesString: string;
   public filterCalories: string = "All Foods"
 
   constructor() {}
@@ -51,6 +52,7 @@ export class FoodListComponent {
     );
     this.calorieCount += foodArray[2];
     this.averageCalories = (this.calorieCount / (this.foodList.length));
+    this.averageCaloriesString = (Math.round((this.averageCalories)*100)/100).toFixed(1);
   }
   onChange(filterOption) {
     this.filterCalories = filterOption;
@@ -63,6 +65,7 @@ export class FoodListComponent {
       }
       this.calorieCount += (this.foodList[i].calories);
       this.averageCalories = (this.calorieCount / (this.foodList.length));
+      this.averageCaloriesString = (Math.round((this.averageCalories)*100)/100).toFixed(1);
     }
   }
 }
