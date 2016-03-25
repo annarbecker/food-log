@@ -1,0 +1,21 @@
+{
+  "name": "food-log",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Anna Becker <anna.r.becker@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
