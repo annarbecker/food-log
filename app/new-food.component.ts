@@ -24,7 +24,7 @@ export class NewFoodComponent {
   }
   addFood(userName: HTMLInputElement, userDescription: HTMLInputElement, userCalories: HTMLInputElement) {
     if(parseInt(userCalories.value) >= 0) {
-      var foodArray: Array<any> = [userName.value, userDescription.value, userCalories.value];
+      var foodArray: Array<any> = [userName.value, userDescription.value, parseInt(userCalories.value)];
       this.onSubmitNewFood.emit(foodArray);
       userName.value = "";
       userDescription.value = "";
